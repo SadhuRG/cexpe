@@ -60,6 +60,9 @@
                     <li class="nav-item {{ setActivo('programas') }}">
                         <a class="nav-link" href="{{url('/programas')}}">Programas</a>
                     </li>
+                    <li class="nav-item {{ setActivo('personas') }}">
+                        <a class="nav-link" href="{{url('/personas')}}">Personas</a>
+                    </li>
                 </ul>
                 <!-- Aquí podrías agregar un formulario de búsqueda, por ejemplo -->
                 <form class="form-inline my-2 my-lg-0">
