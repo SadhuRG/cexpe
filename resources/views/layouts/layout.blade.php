@@ -24,7 +24,7 @@
             color: #555;
         }
 
-        .navbar-nav .active a {
+        .navbar-nav .nav-item.active .nav-link {
             color: red;
             text-decoration: underline;
         }
@@ -49,19 +49,19 @@
                         <a class="nav-link" href="/">Inicio</a>
                     </li>
                     <li class="nav-item {{ setActivo('asesoramiento') }}">
-                        <a class="nav-link" href="{{url('/asesoramiento')}}">Asesoramiento</a>
+                        <a class="nav-link" href="{{ url('/asesoramiento') }}">Asesoramiento</a>
                     </li>
                     <li class="nav-item {{ setActivo('talleres') }}">
-                        <a class="nav-link" href="{{url('/talleres')}}">Talleres</a>
+                        <a class="nav-link" href="{{ url('/talleres') }}">Talleres</a>
                     </li>
                     <li class="nav-item {{ setActivo('contacto') }}">
-                        <a class="nav-link" href="{{url('/contacto')}}">Contacto</a>
+                        <a class="nav-link" href="{{ url('/contacto') }}">Contacto</a>
                     </li>
                     <li class="nav-item {{ setActivo('programas') }}">
-                        <a class="nav-link" href="{{url('/programas')}}">Programas</a>
+                        <a class="nav-link" href="{{ url('/programas') }}">Programas</a>
                     </li>
-                    <li class="nav-item {{ setActivo('personas') }}">
-                        <a class="nav-link" href="{{url('/personas')}}">Personas</a>
+                    <li class="nav-item {{ setActivo('personas*') }}">
+                        <a class="nav-link" href="{{ url('/personas') }}">Personas</a>
                     </li>
                 </ul>
                 <!-- Aquí podrías agregar un formulario de búsqueda, por ejemplo -->

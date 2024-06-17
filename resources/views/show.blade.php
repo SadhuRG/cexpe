@@ -1,11 +1,14 @@
 @extends('layouts.layout')
-@section('title','personas | ' . $persona->cPerApellido  )
+@section('title','personas | ' . $persona->nPerCodigo)
+
 @section('content')
 
 
 <div class="row">
     <div class="col-md-12">
         <h2>Detalles de la persona</h2>
+        <p><strong>Nombre:</strong> {{ $persona->cPerNombre }}</p>
+        <p><strong>Apellido:</strong> {{ $persona->cPerApellido }}</p>
         <p><strong>Dirección:</strong> {{ $persona->cPerDireccion }}</p>
         <p><strong>Fecha de nacimiento:</strong> {{ $persona->cPerFecNac }}</p>
         <p><strong>Edad:</strong> {{ $persona->nPerEdad }}</p>

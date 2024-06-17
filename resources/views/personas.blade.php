@@ -4,6 +4,10 @@
 
 @section('content')
 
+<h2 style="text-align: center; margin: 40px 0;">
+        <a style="color: red; padding: 2px 20px; border: 3px solid red; border-radius: 15px; text-decoration: none;" href="{{ route('personas.create') }}">Nueva Persona</a>
+</h2>
+
 <ul>
     @if($personas)
         @foreach($personas as $persona)

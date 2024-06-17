@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Persona;
+use App\Http\Requests\CreatePersonaRequest;
 
 class PersonaController extends Controller
 {
@@ -18,4 +19,16 @@ class PersonaController extends Controller
             'persona' => Persona::find($nPerCodigo)
         ]);
     }
+
+    public function create(){
+        return view('create');
+    }
+
+    public function store(CreatePersonaRequest $request){
+
+       Persona::create($request->validated());
+
+       return redirect()->route('personas.index');
+    }
+
 }
