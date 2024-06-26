@@ -5,6 +5,12 @@
 
 <a href="{{ route('personas.edit', $persona) }}" style="display: inline-block; padding: 8px 16px; background-color: red; color: white; border: 2px solid black; border-radius: 20px; text-decoration: none; text-align: center; font-size: 20px; margin-right: 20px;">Editar</a>
 
+<form action="{{ route('personas.destroy', $persona) }}" method="POST" style="display: inline-block;">
+    @csrf @method('DELETE')
+    <button type="submit" style="display: inline-block; padding: 8px 16px; background-color: red; color: white; border: 2px solid black; border-radius: 20px; text-decoration: none; text-align: center; font-size: 20px;">Eliminar</button>
+</form>
+
+
 <div class="row">
     <div class="col-md-12">
         <h2>Detalles de la persona</h2>

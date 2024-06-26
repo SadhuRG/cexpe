@@ -21,7 +21,9 @@ class PersonaController extends Controller
     }
 
     public function create(){
-        return view('create');
+        return view('create',[
+            'persona' => new Persona
+    ]);
     }
 
     public function store(CreatePersonaRequest $request){
@@ -37,6 +39,11 @@ class PersonaController extends Controller
 
     public function update(Persona $nPerCodigo, CreatePersonaRequest $request){
         $nPerCodigo->update($request->validated());
+        return redirect()->route('personas.index'); 
+    }
+
+    public function destroy(Persona $nPerCodigo){
+        $nPerCodigo->delete();
         return redirect()->route('personas.index'); 
     }
 }
