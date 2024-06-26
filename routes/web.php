@@ -13,6 +13,10 @@ Route::get('personas','App\Http\Controllers\PersonaController@index')->name('per
 
 Route::get('personas/create','App\Http\Controllers\PersonaController@create')->name('personas.create');
 
+Route::get('personas/{nPerCodigo}/editar','App\Http\Controllers\PersonaController@edit')->name('personas.edit');
+
+Route::patch('personas/{nPerCodigo}','App\Http\Controllers\PersonaController@update')->name('personas.update');
+
 Route::post('personas','App\Http\Controllers\PersonaController@store')->name('personas.store');
 
 Route::get('personas/{nPerCodigo}','App\Http\Controllers\PersonaController@show')->name('persona.show');

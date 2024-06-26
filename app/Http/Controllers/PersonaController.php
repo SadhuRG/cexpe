@@ -25,10 +25,18 @@ class PersonaController extends Controller
     }
 
     public function store(CreatePersonaRequest $request){
-
        Persona::create($request->validated());
-
        return redirect()->route('personas.index');
     }
 
+    public function edit(Persona $nPerCodigo){
+        return view('edit',[
+            'persona'=>$nPerCodigo
+        ]);
+     }
+
+    public function update(Persona $nPerCodigo, CreatePersonaRequest $request){
+        $nPerCodigo->update($request->validated());
+        return redirect()->route('personas.index'); 
+    }
 }

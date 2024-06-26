@@ -27,7 +27,6 @@ class CreatePersonaRequest extends FormRequest
             'cPerDireccion' =>'required',
             'cPerFecNac' =>'required',
             'nPerEdad' =>'required',
-            'cPerSexo' =>'required',
             'nPerSueldo' =>'required',
             'cPerRnd' =>'required',
             //
@@ -41,7 +40,6 @@ class CreatePersonaRequest extends FormRequest
             'cPerDireccion' =>'Se nesesita el dato Direccion para una persona',
             'cPerFecNac' =>'Se nesesita la Fecha de Nacimiento para una persona',
             'nPerEdad' =>'Se nesesita la Edad para una persona',
-            'cPerSexo' =>'Se nesesita el Sexo para una persona',
             'nPerSueldo' =>'Se nesesita el sueldo para una persona',
             'cPerRnd' =>'Se nesesita el RND para una persona',
             //
