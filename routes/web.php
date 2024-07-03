@@ -26,4 +26,6 @@ Route::delete('personas/{nPerCodigo}','App\Http\Controllers\PersonaController@de
 Route::view('asesoramiento','asesoramiento')->name('asesoramiento');
 Route::view('contacto','contacto')->name('contacto');
 
+Route::post('contacto','App\Http\Controllers\ContactoController@store');
+
 
