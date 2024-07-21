@@ -28,7 +28,7 @@ class PersonaController extends Controller
 
     public function store(CreatePersonaRequest $request){
        Persona::create($request->validated());
-       return redirect()->route('personas.index');
+       return redirect()->route('personas.index')->with('estado','La nueva persona fue creada correctamente');
     }
 
     public function edit(Persona $nPerCodigo){
@@ -39,11 +39,16 @@ class PersonaController extends Controller
 
     public function update(Persona $nPerCodigo, CreatePersonaRequest $request){
         $nPerCodigo->update($request->validated());
-        return redirect()->route('personas.index'); 
+        return redirect()->route('personas.index')->with('estado','Los datos de la persona se actualizaron correctamente'); 
     }
 
     public function destroy(Persona $nPerCodigo){
         $nPerCodigo->delete();
-        return redirect()->route('personas.index'); 
+        return redirect()->route('personas.index')->with('estado','La nueva persona fue eliminada correctamente');
     }
+
+    public function __construct(){ 
+        $this->middleware('auth')->except('index','show');
+    }
+
 }

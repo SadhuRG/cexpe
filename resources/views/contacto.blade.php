@@ -8,7 +8,13 @@
     <div style="width: 100%; max-width: 600px; padding: 20px; border: 1px solid #ccc; border-radius: 10px; background-color: #fff;">
         <h2 style="text-align: center; font-weight: bold; font-size: 24px; margin-bottom: 20px;">CONTACTO</h2>
 
+        @if(session('estado'))
+            {{ session('estado') }}
+        @else
         <form action="{{ route('contacto') }}" method="post">
+
+            @csrf {{-- Toquen para verificar que el formulario es seguro --}}
+            <m>
             @csrf
             <div style="margin-bottom: 15px;">
                 <label for="nombre" style="display: block; margin-bottom: 5px;">Nombre</label>
@@ -46,7 +52,11 @@
                 <button type="submit" class="btn btn-primary" style="background-color: #008CBA; color: #fff; padding: 10px 20px; border: none; border-radius: 5px;">Enviar</button>
                 <button type="reset" class="btn btn-secondary" style="background-color: #f44336; color: #fff; padding: 10px 20px; border: none; border-radius: 5px;">Cancelar</button>
             </div>
+
+            </m>
+
         </form>
+        @endif
     </div>
 </div>
 

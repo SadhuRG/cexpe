@@ -4,6 +4,8 @@
 
 @section('content')
 
+
+@auth
 <h2 style="text-align: center;">Editar Nueva Persona</h2>
 
 @include('partials.validation-errors')
@@ -12,5 +14,6 @@
 @method('PATCH')
 @include('partials.form',['btnText' => 'Actualizar'])
 </form>
+@endauth
 
 @endsection

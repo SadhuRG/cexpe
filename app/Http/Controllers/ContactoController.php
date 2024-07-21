@@ -23,9 +23,11 @@ class ContactoController extends Controller
             'mensaje.required' => 'Se requiere el ingreso de un mensaje',
        ]);
 
-       //Mail::to('yosip.urquizo@gmail.com')->send(new MensajeRecibido($mensaje));
-       return new MensajeRecibido($mensaje);
-       return 'Mensaje enviado';
+       Mail::to('t012701020@unitru.edu.pe')->send(new MensajeRecibido($mensaje));
+       //return new MensajeRecibido($mensaje);
+       //return 'Mensaje enviado';
+       return back()->with('estado','Gracias por ponerte en contacto, te responderemos a la brevedad posible');
+
     }
 
     //

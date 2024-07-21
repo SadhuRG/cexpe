@@ -2,7 +2,7 @@
 @section('title','personas | ' . $persona->nPerCodigo)
 
 @section('content')
-
+@auth
 <a href="{{ route('personas.edit', $persona) }}" style="display: inline-block; padding: 8px 16px; background-color: red; color: white; border: 2px solid black; border-radius: 20px; text-decoration: none; text-align: center; font-size: 20px; margin-right: 20px;">Editar</a>
 
 <form action="{{ route('personas.destroy', $persona) }}" method="POST" style="display: inline-block;">
@@ -25,5 +25,6 @@
         <p><strong>Estado:</strong> {{ $persona->cPerEstado }}</p>
     </div>
 </div>
+@endauth
 
 @endsection
