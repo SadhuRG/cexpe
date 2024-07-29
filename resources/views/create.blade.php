@@ -10,7 +10,7 @@
 
 @include('partials.validation-errors')
 
-<form action="{{ route('personas.store') }}" method="post" style="display: flex; justify-content: center;">
+<form action="{{ route('personas.store') }}" method="post" enctype="multipart/form-data" style="display: flex; justify-content: center;">
     @include('partials.form',['btnText' => 'Guardar'])
 </form>
 

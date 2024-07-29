@@ -10,6 +10,7 @@
     <button type="submit" style="display: inline-block; padding: 8px 16px; background-color: red; color: white; border: 2px solid black; border-radius: 20px; text-decoration: none; text-align: center; font-size: 20px;">Eliminar</button>
 </form>
 
+<td><img src="/storage/{{ $persona->image }}" alt="{{ $persona->cPerNombre }}" width="100" height="50"></td>
 
 <div class="row">
     <div class="col-md-12">

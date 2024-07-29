@@ -21,7 +21,8 @@ class CreatePersonaRequest extends FormRequest
      */
     public function rules(): array
     {
-        return [
+        $imageRule = $this->route('persona') ? 'nullable' : 'required';
+        return [   
             'cPerApellido' =>'required',
             'cPerNombre' =>'required',
             'cPerDireccion' =>'required',
@@ -29,6 +30,7 @@ class CreatePersonaRequest extends FormRequest
             'nPerEdad' =>'required',
             'nPerSueldo' =>'required',
             'cPerRnd' =>'required',
+            'image' => [$imageRule, 'mimes:jpeg,png'],
             //
         ];
     }
@@ -42,6 +44,7 @@ class CreatePersonaRequest extends FormRequest
             'nPerEdad' =>'Se nesesita la Edad para una persona',
             'nPerSueldo' =>'Se nesesita el sueldo para una persona',
             'cPerRnd' =>'Se nesesita el RND para una persona',
+            'image.required' =>'Se nesesita una imagen en formato jpeg o png',
             //
         ];
     }

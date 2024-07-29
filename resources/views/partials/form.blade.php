@@ -49,6 +49,12 @@
             <input type="text" name="cPerEstado" value="{{ old('cPerEstado',$persona->cPerEstado) }}" style="flex-grow: 1;">
         </li>
 
+        <li style="display: flex; align-items: center; margin-bottom: 10px;">
+            <label for="image" style="margin-right: 10px;">Imagen</label>
+            <input type="file" name="image" value="{{ old('image',$persona->image) }}" style="flex-grow: 1;">
+        </li>
+
+
         <li style="display: flex; justify-content: center; margin-top: 20px;">
             <button type="submit" style="padding: 10px 20px;">{{ $btnText}}</button>
         </li>
